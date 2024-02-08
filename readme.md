@@ -25,11 +25,11 @@ flask_restapi/
 - **Installation**:
   1. Clone the repository:
      ```bash
-     git clone https://github.com/MaliDipak/flask_restapi.git
+     git clone https://github.com/MaliDipak/Flask-RestAPI
      ```
   2. Navigate to the project directory:
      ```bash
-     cd flask_restapi
+     cd Flask-RestAPI
      ```
   3. Install dependencies:
      ```bash
