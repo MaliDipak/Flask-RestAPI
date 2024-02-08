@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flask RestAPI Project Overview</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 20px;
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        h2 {
+            margin-top: 40px;
+        }
+
+        h3 {
+            margin-top: 20px;
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        li {
+            margin-bottom: 10px;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .code {
+            background-color: #f4f4f4;
+            padding: 10px;
+            overflow-x: auto;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Flask RestAPI Project Overview</h1>
+
+        <h2>Project Name</h2>
+        <p>Flask RestAPI</p>
+
+        <h2>Description</h2>
+        <p>Flask RestAPI is a RESTful web application built using Flask, a lightweight Python web framework. It follows
+            the Model-View-Controller (MVC) architectural pattern, separating concerns and enhancing maintainability.
+            The application provides a user-friendly interface to perform CRUD operations on user data stored in a
+            database.</p>
+
+        <h2>File Structure</h2>
+        <pre class="code">
+flask_restapi/
+│
+├── app.py
+├── controller/
+│   └── userController.py
+├── model/
+│   └── userModel.py
+└── view/
+    └── index.html
+        </pre>
+
+        <h2>Routes</h2>
+        <ul>
+            <li><strong>GET /</strong> - Home page route. Displays information about all routes in the application.</li>
+            <li><strong>GET /routes</strong> - Endpoint to fetch information about all routes in the application.</li>
+            <li><strong>GET /user/getall</strong> - Retrieves all users from the database.</li>
+            <li><strong>GET /user/getone</strong> - Retrieves one random user from the database.</li>
+            <li><strong>GET /user/getone/&lt;id&gt;</strong> - Retrieves a user by their ID from the database.</li>
+            <li><strong>POST /user/add</strong> - Adds a new user to the database.</li>
+            <li><strong>PUT /user/update</strong> - Updates an existing user in the database.</li>
+            <li><strong>DELETE /user/delete/&lt;id&gt;</strong> - Deletes a user from the database by their ID.</li>
+            <li><strong>DELETE /user/deleteall</strong> - Deletes all users from the database.</li>
+        </ul>
+
+        <h2>Components</h2>
+        <h3>Model (userModel.py)</h3>
+        <p>Model component containing data structures and database operations related to users.</p>
+
+        <h3>Controller (userController.py)</h3>
+        <p>Controller component containing route definitions and backend logic for user-related operations.</p>
+
+        <h3>View (index.html)</h3>
+        <p>View component containing the HTML template for the homepage.</p>
+
+        <h2>Usage</h2>
+        <ol>
+            <li>Run the Flask application by executing <code>python app.py</code> in the terminal.</li>
+            <li>Access the homepage at <code>http://localhost:5000/</code> to view route information.</li>
+            <li>Click on the route links to navigate to specific routes and perform CRUD operations on user data.</li>
+        </ol>
+    </div>
+</body>
+
+</html>
