@@ -52,6 +52,7 @@ flask_restapi/
   - **GET /user/getone/&lt;id&gt;:** Retrieves a user by their ID from the database.
   - **POST /user/add:** Adds a new user to the database.
   - **PUT /user/update:** Updates an existing user in the database.
+  - **PATCH /user/updatepatch:** Updates an specific user information in the database.
   - **DELETE /user/delete/&lt;id&gt;:** Deletes a user from the database by their ID.
   - **DELETE /user/deleteall:** Deletes all users from the database.
 
