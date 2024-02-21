@@ -1,13 +1,16 @@
+
 # Flask RestAPI
 
 - **Description**: Flask RestAPI is a RESTful web application built using Flask, a lightweight Python web framework. It provides a user-friendly interface to perform CRUD operations on user data stored in a database. The application follows the Model-View-Controller (MVC) architectural pattern, separating concerns and enhancing maintainability.
-
 
 - **Features**:
   - RESTful API for managing user data
   - MVC architecture for improved organization
   - Routes for CRUD operations on users
   - Responsive HTML page for route information display
+  - JWT authentication for secure user access
+  - Middleware for request and response processing
+  - Decorators for route authorization and validation
 
 - **File Structure** 
 ```
@@ -21,6 +24,8 @@ flask_restapi/
 └── view/
 └── index.html
 ```
+
+
 
 - **Installation**:
   1. Clone the repository:
@@ -56,6 +61,14 @@ flask_restapi/
   - **DELETE /user/delete/&lt;id&gt;:** Deletes a user from the database by their ID.
   - **DELETE /user/deleteall:** Deletes all users from the database.
 
+- **JWT Authentication**:
+  - JWT (JSON Web Token) authentication is used to secure user access to the API. Upon successful login, a JWT token is generated and sent to the client. This token is then included in subsequent requests to authenticate the user.
 
+- **Middleware**:
+  - Middleware functions are used to process requests and responses before they reach the route handler. For example, the `authMiddleware.py` file contains middleware functions for JWT token validation and user authentication.
 
+- **Decorators**:
+  - Decorators are used to add additional functionality to route handlers. For example, the `@jwt_required` decorator is used to ensure that a JWT token is present in the request before allowing access to a route.
+
+---
 
